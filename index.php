@@ -25,7 +25,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 bg-previsao">
                 <div class="row">
                     <div class="col-md-6">
                         <p>Cidade</p>
@@ -40,7 +40,7 @@
                         <h1>20°C</h1>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row card-previsao-pai">
                     <div class="col-md-2 card-previsao">
                         <h3>Seg</h3>
                         <img width="80px"  src="./imgs/sol.png">

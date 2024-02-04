@@ -1,3 +1,28 @@
+body {
+    color: #fff;
+}
+
 .navbar-brand img {
     width: 80px;
+}
+
+.card-previsao {
+    display: flex;
+    border: 1px solid rgb(116 160 253 / 50%);
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(19 97 189 / 50%);
+    max-width: 200px;
+}
+
+.card-previsao-pai{
+    display: flex;
+    gap: 12px;
+}
+
+.bg-previsao {
+    margin-top: 150px;
+    background-image: url(../imgs/bg-previsao.jpg);
+    background-position: center;
+    padding: 30px;
 }
