@@ -1,3 +1,9 @@
+<?php
+
+include 'config.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,60 +33,56 @@
         <div class="row">
             <div class="col-md-12 bg-previsao">
                 <div class="row">
-                    <div class="col-md-6">
-                        <p>Cidade</p>
-                        <h2>Janeiro 4</h2>
-                        <h1>12:37</h1>
-                        <p>Nublado</p>
-                    </div>
-                    <div class="col-md-6">
-                        <p>Pressure</p>
-                        <p>Sunrise</p>
-                        <p>Sunset</p>
-                        <h1>20°C</h1>
+                    <div class="col-md-12">
+                        <p><?php echo $cidade; ?></p>
+                        <h2><?php echo $dataHoje; ?></h2>
+                        <h1><?php echo $horario; ?></h1>
+                        <p><?php echo $descricao; ?></p>
+                        <h1><?php echo $temperatura; ?>°C</h1>
                     </div>
                 </div>
                 <div class="row card-previsao-pai">
                     <div class="col-md-2 card-previsao">
                         <h3>Seg</h3>
                         <img width="80px"  src="./imgs/sol.png">
-                        <h4>20°C</h4>
-                        <h4>18°C</h4>
+                        <h4> <?php echo implode($tempMaxDia['05/02']); ?>°C</h4>
+                        <h4> <?php echo implode($tempMinDia['05/02']); ?>°C</h4>
                     </div>
                     <div class="col-md-2 card-previsao">
                         <h3>Ter</h3>
                         <img width="80px"  src="./imgs/sol.png">
-                        <h4>20°C</h4>
-                        <h4>18°C</h4>
+                        <h4><?php echo implode($tempMaxDia['06/02']); ?>°C</h4>
+                        <h4><?php echo implode($tempMinDia['06/02']); ?>°C</h4>
                     </div>
                     <div class="col-md-2 card-previsao">
                         <h3>Qua</h3>
                         <img width="80px"  src="./imgs/sol.png">
-                        <h4>20°C</h4>
-                        <h4>18°C</h4>
+                        <h4><?php echo implode($tempMaxDia['07/02']); ?>°C</h4>
+                        <h4><?php echo implode($tempMinDia['07/02']); ?>°C</h4>
                     </div>
                     <div class="col-md-2 card-previsao">
                         <h3>Qui</h3>
                         <img width="80px"  src="./imgs/sol.png">
-                        <h4>20°C</h4>
-                        <h4>18°C</h4>
+                        <h4><?php echo implode($tempMaxDia['08/02']); ?>°C</h4>
+                        <h4><?php echo implode($tempMinDia['08/02']); ?>°C</h4>
                     </div>
                     <div class="col-md-2 card-previsao">
                         <h3>Sex</h3>
                         <img width="80px"  src="./imgs/sol.png">
-                        <h4>20°C</h4>
-                        <h4>18°C</h4>
+                        <h4><?php echo implode($tempMaxDia['09/02']); ?>°C</h4>
+                        <h4><?php echo implode($tempMinDia['09/02']); ?>°C</h4>
                     </div>
                     <div class="col-md-2 card-previsao">
                         <h3>Sáb</h3>
                         <img width="80px"  src="./imgs/sol.png">
-                        <h4>20°C</h4>
-                        <h4>18°C</h4>
+                        <h4><?php echo implode($tempMaxDia['10/02']); ?>°C</h4>
+                        <h4><?php echo implode($tempMinDia['10/02']); ?>°C</h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+   
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

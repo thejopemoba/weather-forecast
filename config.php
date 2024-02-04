@@ -27,9 +27,27 @@ $dados = json_decode($resposta, true);
 
 // acessando os elementos do array
 
-$date = $dados['results']['forecast'][0]['date'];
+$dadosCidade = $dados['results'];
 
-echo $date;
+$temperatura = $dadosCidade['temp'];
+$horario = $dadosCidade['time'];
+$descricao = $dadosCidade['description'];
+$cidade = $dadosCidade['city'];
+$dataHoje = $dadosCidade['date'];
 
+$dadosForecast = $dados['results']['forecast'];
+
+$tempMaxDia = array();
+$tempMinDia = array();
+
+foreach ($dadosForecast as $previsao) {
+    $data = $previsao['date'];
+    $tempMax = $previsao ['max'];
+    $tempMin = $previsao['min'];
+
+    $tempMaxDia[$data][] = $tempMax;
+    $tempMinDia[$data][] = $tempMin;
+
+}
 
 ?>
