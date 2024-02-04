@@ -21,14 +21,13 @@ $resposta = curl_exec($instancia);
 
 curl_close($instancia);
 
-
 // decodificando o json, transformando a resposta em json para um array
 
 $dados = json_decode($resposta, true);
 
 // acessando os elementos do array
 
-$date = $dados['results']['date'];
+$date = $dados['results']['forecast'][0]['date'];
 
 echo $date;
 
